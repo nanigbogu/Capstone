@@ -46,7 +46,7 @@ if st.button(label="10. Gantry Plaza State Park - LIC", help='Upload a picture o
 
 user_input = st.file_uploader(
     type = ['png', 'jpg', 'jpeg'],
-    label='Upload a picture of a NYC Landmark',
+    label='Upload your photos here:',
     key='file_uploader'
 )
 
@@ -63,37 +63,62 @@ def predictions(pred_model, user_input):
 
     if pred[0] == 1.:
         link = "[History of 9/11 Memorial](https://www.911memorial.org/911-faqs)"
-        return st.write(link, unsafe_allow_html=True)
+        link10 = '[here](https://911groundzero.com/blog/eat-financial-district/)'
+        st.write(link, unsafe_allow_html=True)
+        st.write("Next stop, The Oculus")
+        st.write("If you are hungry, I recommend looking ", link10, " for food options.", unsafe_allow_html=True) 
     if pred[1] == 1.:
         link1 = "[History of Brooklyn Bridge](https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml)"
-        return st.write(link1, unsafe_allow_html=True)
+        link11 = "[here](https://www.theinfatuation.com/new-york/guides/best-dumbo-brooklyn-heights-restaurants)"
+        st.write(link1, unsafe_allow_html=True)
+        st.write("Next stop, The Brooklyn Height Promenade!")
+        st.write("If you are hungry, I recommend looking ", link11, " for food options.", unsafe_allow_html=True)
     if pred[2] == 1.:
         link2 = "[History of Grand Central Terminal](https://www.grandcentralterminal.com/history/)"
-        return st.write(link2, unsafe_allow_html=True)
+        link12 = "[here](https://www.theinfatuation.com/new-york/guides/grand-central-restaurants)"
+        st.write(link2, unsafe_allow_html=True)
+        st.write("Next stop, Bryant Park!")
+        st.write("If you are hungry, I recommend looking ", link12, " for food options.", unsafe_allow_html=True)
     if pred[3] == 1.:
         link3 = "[History of Empire State Building](https://www.esbnyc.com/about/history)"
-        return st.write(link3, unsafe_allow_html=True)
+        link13 = "[here](https://www.timeout.com/newyork/restaurants/restaurants-near-the-empire-state-building)"
+        st.write(link3, unsafe_allow_html=True)
+        st.write("Next stop, Times Square!")
+        st.write("If you are hungry, I recommend looking ", link13, " for food options.", unsafe_allow_html=True)
     if pred[4] == 1.:
         link4 = "[History of Rockefeller Center](https://www.rockefellercenter.com/history/)"
-        return st.write(link4, unsafe_allow_html=True)
+        link14 = "[here](https://www.hellotickets.com/us/new-york/place-to-eat-near-rockefeller-center/sc-1-2033)"
+        st.write(link4, unsafe_allow_html=True)
+        st.write("Next stop, The MoMA!")
+        st.write("If you are hungry, I recommend looking ", link14, " for food options.", unsafe_allow_html=True)
     if pred[5] == 1.:
         link5 = "[History of Metropolitan Museum of Art](https://www.metmuseum.org/about-the-met/history)"
-        return st.write(link5, unsafe_allow_html=True)
+        link15 = "[here](https://museumhack.com/where-to-eat-near-the-metropolitan-museum-of-art/)"
+        st.write(link5, unsafe_allow_html=True)
+        st.write("Next stop, Central Park!")
+        st.write("If you are hungry, I recommend looking ", link15, " for food options.", unsafe_allow_html=True)
     if pred[6] == 1.:
         link6 = "[History of Long Island City](https://www.lic.nyc/historyandcurrentcontext)"
-        return st.write(link6, unsafe_allow_html=True)
+        link16 = "[here](https://ny.eater.com/maps/best-restaurants-long-island-city-queens-nyc)"
+        st.write(link6, unsafe_allow_html=True)
+        st.write("If you are hungry, I recommend looking ", link16, " for food options.", unsafe_allow_html=True)
     if pred[7] == 1.:
         link7 = "[History of Roosevelt Island](https://www.nps.gov/places/blackwell-s-island-new-york-city.htm)"
-        return st.write(link7, unsafe_allow_html=True)
+        link17 = "[here](https://www.tripadvisor.com/Restaurants-g60763-zfn15565661-New_York_City_New_York.html)"
+        st.write(link7, unsafe_allow_html=True)
+        st.write("If you are hungry, I recommend looking ", link17, " for food options.", unsafe_allow_html=True)
     if pred[8] == 1.:
         link8 = "[History of Statue of Liberty](https://www.statueofliberty.org/statue-of-liberty/overview-history/)"
-        return st.write(link8, unsafe_allow_html=True)
+        link18 = "[here](https://ny.eater.com/maps/best-financial-district-lunch-fast-casual-manhattan-nyc)"
+        st.write(link8, unsafe_allow_html=True)
+        st.write("Next stop, Battery Park!")
+        st.write("If you are hungry, I recommend looking ", link18, " for food options.", unsafe_allow_html=True)
     if pred[9] == 1.:
         link9 = "[History of Hudson Yards](https://ny.curbed.com/2016/12/13/13933084/hudson-yards-new-york-history-manhattan)"
-        link10 = "[here](https://www.hudsonyardsnewyork.com/food-drink)"
+        link19 = "[here](https://www.hudsonyardsnewyork.com/food-drink)"
         st.write(link9, unsafe_allow_html=True)
         st.write("Next stop, The High Line!")
-        st.write("If you are hungry, I recommend looking ", link10, "for food options.", unsafe_allow_html=True)
+        st.write("If you are hungry, I recommend looking ", link19, "for food options.", unsafe_allow_html=True)
     return ""
 
 if user_input:

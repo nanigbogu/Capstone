@@ -11,7 +11,6 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array, smart_r
 
 st.markdown("<h1 style='text-align: center; color: light blue;'>NYC Budget- Friendly Weekend Guide</h1>", unsafe_allow_html=True)
 # https://discuss.streamlit.io/t/how-do-i-align-st-title/1668/4
-# st.markdown("<h2 style='text-align: center; color: white'>Learn About NYC's History</h2>", unsafe_allow_html=True)
 
 landmarks = {'Name': ['Empire State', 'Met Museum', 'Statue of Liberty', 'Rockefeller Ctr', 'Grand Central', 
                       'Hudson Yards', 'BK Bridge', '911 Memorial', 'LIC', 'Roosevelt Island'], 
